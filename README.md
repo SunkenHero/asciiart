@@ -1,2 +1,2 @@
 # asciiart
-Python project for turning images to ascii art
+Python project for converting images to ascii art
