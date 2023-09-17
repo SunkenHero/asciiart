@@ -4,18 +4,16 @@ import time
 
 create = CreateBitMap(32, -2, -6)
 
-wish_height = 50;
+wish_height = 20;
 scale_height = wish_height * 32;
 wish_width = wish_height;
 scale_width = wish_width * 32;
 
 compare = CompareBitMap()
 start_time = time.time()
-with Image.open("arch.png") as image:
+with Image.open("debian.png") as image:
     image = image.convert("RGB")
     image = image.convert("L")
-    image = ImageChops.invert(image)
-    image.save("test.bmp")
     image = image.point(lambda x: 0 if x == 0 else 1, mode='1')
     
     image = image.resize((scale_width, scale_height))
